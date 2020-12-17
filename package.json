@@ -1,0 +1,50 @@
+{
+  "name": "accessible-object",
+  "description": "Compute an accessible object from a DOM node",
+  "version": "0.0.1",
+  "author": "Paul Cuthbertson",
+  "bugs": {
+    "url": "https://github.com/paulcuth/accessible-object/issues"
+  },
+  "dependencies": {
+    "dom-accessibility-api": "^0.5.4"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.8.7",
+    "@babel/runtime": "^7.8.7",
+    "@types/react": "^17.0.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@testing-library/dom": "^7.29.0",
+    "@testing-library/react": "^11.2.2",
+    "babel-jest": "^26.6.3",
+    "core-js": "^3.8.1",
+    "cross-env": "^5.2.1",
+    "jest": "^25.3.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "regenerator-runtime": "^0.13.7",
+    "ts-jest": "^26.4.4",
+    "typescript": "^3.8.3"
+  },
+  "homepage": "https://github.com/paulcuth/accessible-object",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulcuth/accessible-object.git"
+  },
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc --outDir ./build ./src/index.ts",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w ./src --out-dir built --extensions \".ts\" --ignore \"**/__tests__\"",
+    "test": "jest",
+    "check-types": "tsc -w"
+  }
+}
