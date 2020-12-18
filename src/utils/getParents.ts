@@ -1,7 +1,8 @@
 export default (element: Element): Array<Element> => {
-  return findParentsByOwnership(element) ?? element.parentElement == null
-    ? []
-    : [element.parentElement];
+  return (
+    findParentsByOwnership(element) ??
+    (element.parentElement == null ? [] : [element.parentElement])
+  );
 };
 
 const findParentsByOwnership = (element: Element): Array<Element> | null => {

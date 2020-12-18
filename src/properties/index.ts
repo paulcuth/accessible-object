@@ -37,6 +37,10 @@ import * as relevant from "./relevant";
 import * as required from "./required";
 import * as roleDescription from "./roleDescription";
 import * as rowCount from "./rowCount";
+import * as rowIndex from "./rowIndex";
+import * as rowSpan from "./rowSpan";
+import * as selected from "./selected";
+import * as setSize from "./setSize";
 
 export default [
   activeDescendant,
@@ -76,4 +80,8 @@ export default [
   required,
   roleDescription,
   rowCount,
+  rowIndex,
+  rowSpan,
+  selected,
+  setSize,
 ];

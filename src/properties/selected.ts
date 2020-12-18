@@ -1,9 +1,17 @@
 import getBooleanAriaAttributeValue from "../utils/getBooleanAriaAttributeValue";
 import { AccessibleObject } from "../types";
 
-const VALID_ROLES = ["button"];
+const VALID_ROLES = [
+  "gridcell",
+  "option",
+  "row",
+  "tab",
+  "columnheader",
+  "rowheader",
+  "treeitem",
+];
 
-export const name = "pressed";
+export const name = "selected";
 
 export const resolver = (result: AccessibleObject, element: Element) => {
   const { role } = result;
@@ -13,12 +21,7 @@ export const resolver = (result: AccessibleObject, element: Element) => {
     return null;
   }
 
-  const ariaValue = element.getAttribute("aria-pressed");
-
-  // If aria value is "mixed", return that
-  if (ariaValue === "mixed") {
-    return ariaValue;
-  }
+  const ariaValue = element.getAttribute("aria-selected");
 
   // If aria value is "false", return boolean
   if (ariaValue === "false") {
@@ -26,5 +29,5 @@ export const resolver = (result: AccessibleObject, element: Element) => {
   }
 
   // Otherwise return true or null
-  return getBooleanAriaAttributeValue(element, "aria-pressed");
+  return getBooleanAriaAttributeValue(element, "aria-selected");
 };
