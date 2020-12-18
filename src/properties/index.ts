@@ -14,6 +14,8 @@ import * as disabled from "./disabled";
 import * as errorMessage from "./errorMessage";
 import * as expanded from "./expanded";
 import * as flowTo from "./flowTo";
+import * as focusable from "./focusable";
+import * as focused from "./focused";
 import * as hasPopup from "./hasPopup";
 import * as hidden from "./hidden";
 import * as invalid from "./invalid";
@@ -39,6 +41,7 @@ import * as rowIndex from "./rowIndex";
 import * as rowSpan from "./rowSpan";
 import * as selected from "./selected";
 import * as setSize from "./setSize";
+import * as sort from "./sort";
 
 export default [
   activeDescendant,
@@ -57,6 +60,8 @@ export default [
   errorMessage,
   expanded,
   flowTo,
+  focusable,
+  focused,
   hasPopup,
   hidden,
   invalid,
@@ -82,4 +87,5 @@ export default [
   rowSpan,
   selected,
   setSize,
+  sort,
 ];

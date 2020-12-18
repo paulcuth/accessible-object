@@ -91,6 +91,8 @@ export type AccessibleObject = {
   errorMessage?: Element;
   expanded?: boolean;
   flowTo?: Array<Element>;
+  focusable?: boolean;
+  focused?: boolean;
   hasPopup?: "menu" | "listbox" | "tree" | "grid" | "dialog";
   hidden?: true;
   invalid?: true | "spelling" | "grammar";
@@ -110,10 +112,14 @@ export type AccessibleObject = {
   readOnly?: boolean;
   relevant?: Array<"additions" | "removals" | "text">;
   required?: boolean;
-  roleDecsription?: string;
+  roleDescription?: string;
+  rowCount?: number;
+  rowIndex?: number;
+  rowSpan?: number;
+  selected?: boolean;
+  setSize?: number;
+  sort?: "ascending" | "descending" | "other" | "none";
 
   value?: string;
   invalidUserEntry?: boolean;
-  focusable?: boolean;
-  focused?: boolean;
 };

@@ -5,7 +5,7 @@ export type Options = {
 };
 
 export default (element: Element, attr: string, options: Options = {}) => {
-  const { min = 0, max } = options;
+  const { min, max } = options;
   const value = parseInt(element.getAttribute(attr) ?? "", 10);
 
   const isValid =

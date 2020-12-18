@@ -1,18 +1,16 @@
-
-
 # To do
 
 -[x] rowSpan
 -[x] selected
--[ ] setSize
--[ ] sort
+-[x] setSize
+-[x] sort
 -[ ] valueMax
 -[ ] valueMin
 -[ ] valueNow
 -[ ] valueText
 -[ ] check valid values of colIndex 
--[ ] focussed
--[ ] focussable
+-[x] focussed
+-[x] focussable
 -[ ] Consider colSpan in colIndex calculations
 -[ ] Consider rowSpan in rowIndex calculations
 -[ ] Compute level when not provided

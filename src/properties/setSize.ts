@@ -1,5 +1,3 @@
-import { getRole } from "dom-accessibility-api";
-
 import { AccessibleObject } from "../types";
 import getIntegerAttributeValue from "../utils/getIntegerAttributeValue";
 
