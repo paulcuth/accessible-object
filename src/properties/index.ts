@@ -1,5 +1,3 @@
-// @flow strict
-
 import * as activeDescendant from "./activeDescendant";
 import * as atomic from "./atomic";
 import * as autoComplete from "./autoComplete";
