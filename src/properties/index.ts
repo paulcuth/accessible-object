@@ -42,6 +42,7 @@ import * as rowSpan from "./rowSpan";
 import * as selected from "./selected";
 import * as setSize from "./setSize";
 import * as sort from "./sort";
+import * as valueMax from "./valueMax";
 
 export default [
   activeDescendant,
@@ -88,4 +89,5 @@ export default [
   selected,
   setSize,
   sort,
+  valueMax,
 ];

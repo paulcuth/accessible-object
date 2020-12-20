@@ -9,7 +9,7 @@ import properties from "./properties";
 
 export default (element: Element): AccessibleObject => {
   const init: AccessibleObject = {
-    role: getRole(element) as Role,
+    role: computeRole(element),
     name: computeAccessibleName(element),
     description: computeAccessibleDescription(element),
   };
@@ -35,4 +35,25 @@ const mutateObj = <T extends AccessibleObject, K extends keyof T>(
   value: T[K]
 ) => {
   obj[key] = value;
+};
+
+const computeRole = (element: Element): Role | null => {
+  // Use value from `dom-accessibility-api` if returned...
+  const role = getRole(element) as Role;
+  if (role != null) {
+    return role;
+  }
+
+  // ...and fill in the blanks
+  const { tagName, type } = element as HTMLInputElement;
+
+  if (tagName === "METER") {
+    return "progressbar";
+  }
+
+  if (tagName === "INPUT" && type === "number") {
+    return "spinbutton";
+  }
+
+  return null;
 };
