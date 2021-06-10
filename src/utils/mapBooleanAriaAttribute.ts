@@ -9,7 +9,7 @@ export default (attr: string, options: Options = {}) => {
   return (result: AccessibleObject, element: Element) => {
     const { roles } = options;
 
-    if (roles != null && !roles.includes(result.role)) {
+    if (roles != null && (result.role == null || !roles.includes(result.role))) {
       return null;
     }
 
